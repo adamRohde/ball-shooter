@@ -82,24 +82,6 @@ function draw() {
         }
     }
 
-    if (keyIsDown(UP_ARROW)) {
-        shooterball.key = "UP_ARROW";
-        if (shooterball.y <= 262) {
-            shooterball.y = shooterball.y;
-        } else {
-            shooterball.y -= 5;
-        }
-    }
-
-    if (keyIsDown(DOWN_ARROW)) {
-        shooterball.key = "DOWN_ARROW";
-        if (shooterball.y >= 388) {
-            shooterball.y = shooterball.y;
-        } else {
-            shooterball.y += 5;
-        }
-    }
-
     //#################################### Bouncy balls stuff ####################################
     for (let i = 0; i < bouncyballs.length; i++) {
         bouncyballs[i].checkBoundary();
@@ -258,103 +240,6 @@ function keyPressed() {
     if (keyCode === 16) {
         writer.close();
     }
-}
-
-//#################################### Update balls ####################################
-function UpdateBalls(add) {
-    pointStr = concat("Points = ", points);
-    ballsStr = concat("Balls = ", bouncyballs.length);
-    // if (points === 5 && bouncyballs.length === 1) {
-    //     bouncyballs.push(
-    //         new BouncyBall(
-    //             createVector(random(width), random(150)),
-    //             p5.Vector.random2D().mult(random(2)),
-    //             12,
-    //             color(random(255), random(255), random(255))
-    //         )
-    //     );
-    // } else if (points === 10 && bouncyballs.length === 2) {
-    //     bouncyballs.push(
-    //         new BouncyBall(
-    //             createVector(random(width), random(150)),
-    //             p5.Vector.random2D().mult(random(2)),
-    //             12,
-    //             color(random(255), random(255), random(255))
-    //         )
-    //     );
-    // } else if (points === 15 && bouncyballs.length === 3) {
-    //     bouncyballs.push(
-    //         new BouncyBall(
-    //             createVector(random(width), random(150)),
-    //             p5.Vector.random2D().mult(random(2)),
-    //             12,
-    //             color(random(255), random(255), random(255))
-    //         )
-    //     );
-    // } else if (points === 20 && bouncyballs.length === 4) {
-    //     bouncyballs.push(
-    //         new BouncyBall(
-    //             createVector(random(width), random(150)),
-    //             p5.Vector.random2D().mult(random(2)),
-    //             12,
-    //             color(random(255), random(255), random(255))
-    //         )
-    //     );
-    // } else if (points === 25 && bouncyballs.length === 5) {
-    //     bouncyballs.push(
-    //         new BouncyBall(
-    //             createVector(random(width), random(150)),
-    //             p5.Vector.random2D().mult(random(2)),
-    //             12,
-    //             color(random(255), random(255), random(255))
-    //         )
-    //     );
-    // } else if (points === 30 && bouncyballs.length === 6) {
-    //     bouncyballs.push(
-    //         new BouncyBall(
-    //             createVector(random(width), random(150)),
-    //             p5.Vector.random2D().mult(random(2)),
-    //             12,
-    //             color(random(255), random(255), random(255))
-    //         )
-    //     );
-    // } else if (points === 35 && bouncyballs.length === 7) {
-    //     bouncyballs.push(
-    //         new BouncyBall(
-    //             createVector(random(width), random(150)),
-    //             p5.Vector.random2D().mult(random(2)),
-    //             12,
-    //             color(random(255), random(255), random(255))
-    //         )
-    //     );
-    // } else if (points === 40 && bouncyballs.length === 8) {
-    //     bouncyballs.push(
-    //         new BouncyBall(
-    //             createVector(random(width), random(150)),
-    //             p5.Vector.random2D().mult(random(2)),
-    //             12,
-    //             color(random(255), random(255), random(255))
-    //         )
-    //     );
-    // } else if (points === 45 && bouncyballs.length === 9) {
-    //     bouncyballs.push(
-    //         new BouncyBall(
-    //             createVector(random(width), random(150)),
-    //             p5.Vector.random2D().mult(random(2)),
-    //             12,
-    //             color(random(255), random(255), random(255))
-    //         )
-    //     );
-    // } else if (points === 50 && bouncyballs.length === 10) {
-    //     bouncyballs.push(
-    //         new BouncyBall(
-    //             createVector(random(width), random(150)),
-    //             p5.Vector.random2D().mult(random(2)),
-    //             12,
-    //             color(random(255), random(255), random(255))
-    //         )
-    //     );
-    // }
 }
 
 //#################################### Classes ####################################
